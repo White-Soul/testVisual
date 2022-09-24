@@ -1,24 +1,22 @@
-# test
+# 基于vue+echarts的可视化系统设计与开发
 
-## Project setup
-```
-npm install
-```
+## 使用本项目需要Node.js以及Vue脚手架
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### 如果想下载Node.js请点击[这里](http://nodejs.cn/download/)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### Vue脚手架安装
 
-### Lints and fixes files
 ```
-npm run lint
+npm install -g @vue/cli
 ```
+## 下载
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### [Web可视化设计](https://github.com/White-Soul/Visual/releases/tag/WebVisual)
+
+## 运行本项目
+```shell
+# 安装serve本地服务器
+npm install -g serve
+# 启动服务器
+serve -s [文件夹名]
+```
