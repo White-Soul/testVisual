@@ -15,6 +15,7 @@ export default {
     init() {
       this.chart = markRaw(echarts.init(this.$refs.line1));
       var option = {
+        title: { text: "播放量" },
         tooltip: {
           trigger: "axis",
         },
@@ -29,7 +30,7 @@ export default {
         grid: {
           left: "10",
           right: "10",
-          top: "30",
+          top: "40",
           bottom: "10",
           containLabel: true,
         },

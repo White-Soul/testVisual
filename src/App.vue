@@ -3,11 +3,11 @@
     <el-container>
       <el-header height="70px">
         <el-row>
-          <el-col :push="10" :span="4">
-            <h1>标题</h1>
+          <el-col :push="9" :span="6">
+            <h1>数据可视化-ECharts</h1>
           </el-col>
-          <el-col :push="14" :span="4">
-            <p style="float: right">日期</p>
+          <el-col :push="10" :span="5">
+            <p style="float: right">{{ date }}</p>
           </el-col>
         </el-row>
       </el-header>
@@ -19,13 +19,13 @@
             <pie-1 />
           </el-col>
           <el-col :span="10">
-            <div class="text">文字</div>
+            <div class="text"></div>
             <Map />
           </el-col>
           <el-col :span="7">
             <bar-1 />
             <line-2 />
-            <bar />
+            <pie-2 />
           </el-col>
         </el-row>
       </el-main>
@@ -40,9 +40,15 @@ import Bar1 from "./components/bar1.vue";
 import Line1 from "./components/line1.vue";
 import Line2 from "./components/line2.vue";
 import Pie1 from "./components/pie1.vue";
+import Pie2 from "./components/pie2.vue";
 export default {
-  components: { bar, Map, Bar1, Line1, Line2, Pie1 },
+  components: { bar, Map, Bar1, Line1, Line2, Pie1, Pie2 },
   name: "App",
+  computed: {
+    date() {
+      return new Date().toLocaleDateString();
+    },
+  },
 };
 </script>
 

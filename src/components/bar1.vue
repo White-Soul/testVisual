@@ -15,6 +15,7 @@ export default {
     init() {
       this.chart = markRaw(echarts.init(this.$refs.bar1));
       var option = {
+        title: { text: "就业行业" },
         grid: {
           left: "22%",
           top: "10%",

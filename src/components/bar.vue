@@ -27,6 +27,7 @@ export default {
     init() {
       this.chart = markRaw(echarts.init(this.$refs.chart));
       var option = {
+        title: { text: "就业行业" },
         color: ["#2f89cf"],
         tooltip: {
           trigger: "axis",
@@ -36,7 +37,7 @@ export default {
         },
         grid: {
           left: "0%",
-          top: "10px",
+          top: "50px",
           right: "0%",
           bottom: "4%",
           containLabel: true,

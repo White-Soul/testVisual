@@ -18,7 +18,6 @@ export default {
       echarts.registerMap("china", china);
       this.chart = markRaw(echarts.init(this.$refs.map));
       let option = {
-        title: { text: "地图" },
         series: {
           name: "地图",
           map: "china",

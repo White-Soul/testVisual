@@ -15,6 +15,7 @@ export default {
     init() {
       this.chart = markRaw(echarts.init(this.$refs.line));
       var option = {
+        title: { text: "人员变化" },
         color: ["#00f2f1", "#ed3f35"],
         tooltip: {
           trigger: "axis",

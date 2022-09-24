@@ -17,46 +17,58 @@ export default {
     init() {
       this.chart = markRaw(echarts.init(this.$refs.pie1));
       var option = {
-        title: { text: "年龄分布" },
+        title: { text: "地区分布" },
         tooltip: {
           trigger: "item",
+          formatter: "{a} <br/>{b} : {c} ({d}%)",
         },
         legend: {
-          left: 10,
-          bottom: "0%",
+          bottom: "0",
           itemWidth: 10,
           itemHeight: 10,
           textStyle: {
             fontSize: 12,
-            color: "black",
           },
         },
         series: [
           {
-            name: "Access From",
+            name: "地区分布",
             type: "pie",
-            radius: ["40%", "60%"],
+            radius: ["10%", "70%"],
             center: ["50%", "50%"],
-            avoidLabelOverlap: false,
-            // 文字标签是否显示
-            label: {
-              show: false,
-              position: "center",
-            },
-            // 连接文字和图片的线是否显示
-            labelLine: {
-              show: false,
+            roseType: "radius",
+            itemStyle: {
+              borderRadius: 5,
             },
             data: [
-              { value: 1, name: "0岁以下" },
-              { value: 4, name: "20-29岁" },
-              { value: 2, name: "30-39岁" },
-              { value: 2, name: "40-49岁" },
-              { value: 1, name: "50岁以上" },
+              { value: 20, name: "云南" },
+              { value: 26, name: "北京" },
+              { value: 24, name: "山东" },
+              { value: 25, name: "河北" },
+              { value: 20, name: "江苏" },
+              { value: 25, name: "浙江" },
+              { value: 30, name: "四川" },
+              { value: 42, name: "湖北" },
             ],
+            label: {
+              fontSize: 10,
+            },
+            labelLine: {
+              length: 6,
+              length2: 8,
+            },
           },
         ],
-        color: ["#065aab", "#066eab", "#0682ab", "#0696ab", "#06a0ab"],
+        color: [
+          "#006cff",
+          "#60cda0",
+          "#ed8884",
+          "#ff9f7f",
+          "#0096ff",
+          "#32c5e9",
+          "#9fe6b8",
+          "#1d9dff",
+        ],
       };
       this.chart.setOption(option);
     },
