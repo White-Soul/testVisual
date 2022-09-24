@@ -11,7 +11,7 @@ npm install -g @vue/cli
 ```
 ## 下载
 
-### [Web可视化设计](https://github.com/White-Soul/Visual/releases/tag/WebVisual)
+### [Web可视化设计](https://github.com/White-Soul/testVisual/releases/tag/v1.0.0)
 
 ## 运行本项目
 ```shell
@@ -20,3 +20,5 @@ npm install -g serve
 # 启动服务器
 serve -s [文件夹名]
 ```
+
+> 注：本项目并未使用动态数据
