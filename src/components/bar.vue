@@ -9,17 +9,16 @@ export default {
   name: "chart",
   data() {
     return {
-      dataset: [
-        "旅游行业",
-        "教育培训",
-        "游戏行业",
-        "医疗行业",
-        "电商行业",
-        "社交行业",
-        "金融行业",
-      ],
+      // dataset: [
+      //   "旅游行业",
+      //   "教育培训",
+      //   "游戏行业",
+      //   "医疗行业",
+      //   "电商行业",
+      //   "社交行业",
+      //   "金融行业",
+      // ],
       chart: null,
-      option: {},
     };
   },
   props: ["type"],
@@ -45,7 +44,7 @@ export default {
         xAxis: [
           {
             type: "category",
-            data: this.dataset,
+            // data: this.dataset,
             axisTick: {
               alignWithLabel: true,
             },
@@ -90,12 +89,23 @@ export default {
             name: "Direct",
             type: "bar",
             barWidth: "35%",
-            data: [200, 300, 300, 900, 1500, 1200, 600],
+            // data: [],
             itemStyle: {
               borderRadius: 5,
             },
           },
         ],
+        dataset: {
+          source: [
+            ["旅游行业", 200],
+            ["教育培训", 300],
+            ["游戏行业", 300],
+            ["医疗行业", 900],
+            ["电商行业", 1500],
+            ["社交行业", 1200],
+            ["金融行业", 600],
+          ],
+        },
       };
       this.chart.setOption(option);
     },

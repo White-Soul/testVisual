@@ -19,7 +19,7 @@
             <pie-1 />
           </el-col>
           <el-col :span="10">
-            <div class="text"></div>
+            <context />
             <Map />
           </el-col>
           <el-col :span="7">
@@ -41,8 +41,9 @@ import Line1 from "./components/line1.vue";
 import Line2 from "./components/line2.vue";
 import Pie1 from "./components/pie1.vue";
 import Pie2 from "./components/pie2.vue";
+import context from "./components/context.vue";
 export default {
-  components: { bar, Map, Bar1, Line1, Line2, Pie1, Pie2 },
+  components: { bar, Map, Bar1, Line1, Line2, Pie1, Pie2, context },
   name: "App",
   computed: {
     date() {
@@ -73,11 +74,11 @@ body,
 /* .el-main {
   border: 1px solid black;
 } */
-.text {
+/* .text {
   height: 100px;
   margin: 20px 0;
-  /* border: 1px solid black; */
-}
+  border: 1px solid black; 
+} */
 .el-container {
   text-align: center;
 }
