@@ -20,6 +20,8 @@ export default {
         title: { text: "年龄分布" },
         tooltip: {
           trigger: "item",
+          formatter: "{a} <br/>{b} ({d}%)",
+          // formatter: "{d}%",
         },
         legend: {
           left: 10,
@@ -33,7 +35,7 @@ export default {
         },
         series: [
           {
-            name: "Access From",
+            name: "人数比例",
             type: "pie",
             radius: ["40%", "60%"],
             center: ["50%", "50%"],
@@ -48,11 +50,11 @@ export default {
               show: false,
             },
             data: [
-              { value: 1, name: "0岁以下" },
-              { value: 4, name: "20-29岁" },
-              { value: 2, name: "30-39岁" },
-              { value: 2, name: "40-49岁" },
-              { value: 1, name: "50岁以上" },
+              { value: 10, name: "20岁以下" },
+              { value: 40, name: "20-29岁" },
+              { value: 20, name: "30-39岁" },
+              { value: 20, name: "40-49岁" },
+              { value: 10, name: "50岁以上" },
             ],
           },
         ],

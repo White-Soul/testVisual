@@ -82,14 +82,14 @@ export default {
         },
         series: [
           {
-            name: "新增粉丝",
+            name: "新增人员",
             type: "line",
             // 以圆滑曲线显示
             smooth: "true",
             data: [24, 40, 101, 134, 90, 230, 210, 230, 120, 230, 210, 120],
           },
           {
-            name: "新增游客",
+            name: "需求人员",
             type: "line",
             // 以圆滑曲线显示
             smooth: "true",

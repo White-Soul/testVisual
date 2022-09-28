@@ -15,12 +15,11 @@ export default {
     init() {
       this.chart = markRaw(echarts.init(this.$refs.line1));
       var option = {
-        title: { text: "播放量" },
+        title: { text: "需求量" },
         tooltip: {
           trigger: "axis",
         },
         legend: {
-          data: ["Email", "Union Ads"],
           top: "0%",
           textStyle: {
             color: "black",
@@ -103,7 +102,7 @@ export default {
         ],
         series: [
           {
-            name: "Email",
+            name: "前端",
             type: "line",
             smooth: true,
             areaStyle: {},
@@ -130,7 +129,7 @@ export default {
             showSymbol: false,
           },
           {
-            name: "Union Ads",
+            name: "后端",
             type: "line",
             smooth: true,
             areaStyle: {},
