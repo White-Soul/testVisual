@@ -13,23 +13,12 @@ export default {
       chart: null,
     };
   },
+  props: ["option"],
   methods: {
     init() {
       echarts.registerMap("china", china);
       this.chart = markRaw(echarts.init(this.$refs.map));
-      let option = {
-        title: { text: "世界地图" },
-        series: {
-          name: "地图",
-          map: "china",
-          type: "map",
-          itemStyle: {
-            borderWidth: 1,
-            borderColor: "skyblue",
-          },
-        },
-      };
-      this.chart.setOption(option);
+      this.chart.setOption(this.option);
     },
     resize() {
       this.chart.resize();

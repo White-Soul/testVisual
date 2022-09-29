@@ -1,5 +1,5 @@
 <template>
-  <div class="pie1" ref="pie1"></div>
+  <div class="pie" ref="pie"></div>
 </template>
 
 <script>
@@ -25,56 +25,12 @@ export default {
       ],
     };
   },
-  props: ["type"],
+  props: ["option"],
   methods: {
     init() {
-      this.chart = markRaw(echarts.init(this.$refs.pie1));
-      var option = {
-        title: { text: "地区分布" },
-        tooltip: {
-          trigger: "item",
-          formatter: "{a} <br/>{b} : {c} ({d}%)",
-        },
-        legend: {
-          bottom: "0",
-          itemWidth: 10,
-          itemHeight: 10,
-          textStyle: {
-            fontSize: 12,
-          },
-        },
-        series: [
-          {
-            name: "地区分布",
-            type: "pie",
-            radius: ["10%", "70%"],
-            center: ["50%", "50%"],
-            roseType: "radius",
-            itemStyle: {
-              borderRadius: 5,
-            },
-            data: this.datas,
-            label: {
-              fontSize: 10,
-            },
-            labelLine: {
-              length: 6,
-              length2: 8,
-            },
-          },
-        ],
-        color: [
-          "#006cff",
-          "#60cda0",
-          "#ed8884",
-          "#ff9f7f",
-          "#0096ff",
-          "#32c5e9",
-          "#9fe6b8",
-          "#1d9dff",
-        ],
-      };
-      this.chart.setOption(option);
+      this.chart = markRaw(echarts.init(this.$refs.pie));
+      this.option.series[0].data = this.datas;
+      this.chart.setOption(this.option);
     },
     resize() {
       this.chart.resize();
@@ -114,9 +70,8 @@ export default {
   },
 };
 </script>
-
 <style scoped>
-.pie1 {
+.pie {
   height: 400px;
 }
-</style>
+</style>;

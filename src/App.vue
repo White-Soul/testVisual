@@ -14,18 +14,18 @@
       <el-main>
         <el-row :gutter="15">
           <el-col :span="7">
-            <bar />
-            <line-1 />
-            <pie-1 />
+            <bar :option="bar1" />
+            <bar :option="line1" />
+            <bar :option="pie1" />
           </el-col>
           <el-col :span="10">
             <context />
-            <Map />
+            <Map :option="map" />
           </el-col>
           <el-col :span="7">
-            <bar-1 />
-            <line-2 />
-            <pie-2 />
+            <bar :option="bar2" />
+            <bar :option="line2" />
+            <pie :option="pie2" />
           </el-col>
         </el-row>
       </el-main>
@@ -34,17 +34,25 @@
 </template>
 
 <script>
-import Map from "./components/map.vue";
 import bar from "./components/bar.vue";
-import Bar1 from "./components/bar1.vue";
-import Line1 from "./components/line1.vue";
-import Line2 from "./components/line2.vue";
-import Pie1 from "./components/pie1.vue";
-import Pie2 from "./components/pie2.vue";
 import context from "./components/context.vue";
+import pie from "./components/pie.vue";
+import Map from "./components/map.vue";
+import { bar1, bar2, line1, line2, pie1, pie2, map } from "./assets/option";
 export default {
-  components: { bar, Map, Bar1, Line1, Line2, Pie1, Pie2, context },
+  components: { bar, context, pie, Map },
   name: "App",
+  data() {
+    return {
+      bar1,
+      bar2,
+      line1,
+      line2,
+      pie1,
+      pie2,
+      map,
+    };
+  },
   computed: {
     date() {
       return new Date().toLocaleDateString();

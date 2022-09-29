@@ -13,7 +13,8 @@
     "core-js": "^3.25.1",
     "echarts": "^5.3.3",
     "element-ui": "^2.15.10",
-    "vue": "^2.6.14"
+    "vue": "^2.6.14",
+    "vue-router": "^3.6.5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
